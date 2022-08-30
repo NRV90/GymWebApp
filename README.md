@@ -9,7 +9,7 @@
 
   <p align="center">
  
-    [Report Bug](https://github.com/ManuAlexandru/TrackingTimeApp/issues)
+  <a href="https://github.com/ManuAlexandru/TrackingTimeApp/issues">Report Bug</a>
   </p>
 </div>
 
