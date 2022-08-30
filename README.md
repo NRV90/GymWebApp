@@ -61,13 +61,13 @@ As the course advances, all languages, tools and technologies used will be poste
 <!-- ROADMAP -->
 
 ## Roadmap
--[Done]Create a repository on GitHub.
--[Done]Create Readme.
--[Done]Connect the project to MongoDb.
--[Done]Accounts and roles.
--[Done]Admin responsabilities.
--[In Progress]Adding owners and trainers pages.
--[In Progress]UI/UX improvements.
+-[x]Create a repository on GitHub.
+-[x]Create Readme.
+-[x]Connect the project to MongoDb.
+-[x]Accounts and roles.
+-[x]Admin responsabilities.
+-[]Adding owners and trainers pages.
+-[]UI/UX improvements.
 
 
 
