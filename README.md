@@ -8,11 +8,7 @@
   <h3 align="center">Personal Project</h3>
 
   <p align="center">
-    Project created during the Cognizant Softvision Webinar<br />
-    You can view the homeworks live by clicking the 'Live Website' link below
-   
-    <br />
-    
+ 
     <a href="https://github.com/ManuAlexandru/TrackingTimeApp/issues">Report Bug</a>
   </p>
 </div>
