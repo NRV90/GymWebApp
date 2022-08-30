@@ -1,0 +1,12 @@
+F:\Repos\LicentaGit\Licenta\Licenta.Models\bin\Debug\net6.0\Licenta.Models.deps.json
+F:\Repos\LicentaGit\Licenta\Licenta.Models\bin\Debug\net6.0\Licenta.Models.dll
+F:\Repos\LicentaGit\Licenta\Licenta.Models\bin\Debug\net6.0\Licenta.Models.pdb
+F:\Repos\LicentaGit\Licenta\Licenta.Models\obj\Debug\net6.0\Licenta.Models.csproj.AssemblyReference.cache
+F:\Repos\LicentaGit\Licenta\Licenta.Models\obj\Debug\net6.0\Licenta.Models.GeneratedMSBuildEditorConfig.editorconfig
+F:\Repos\LicentaGit\Licenta\Licenta.Models\obj\Debug\net6.0\Licenta.Models.AssemblyInfoInputs.cache
+F:\Repos\LicentaGit\Licenta\Licenta.Models\obj\Debug\net6.0\Licenta.Models.AssemblyInfo.cs
+F:\Repos\LicentaGit\Licenta\Licenta.Models\obj\Debug\net6.0\Licenta.Models.csproj.CoreCompileInputs.cache
+F:\Repos\LicentaGit\Licenta\Licenta.Models\obj\Debug\net6.0\Licenta.Models.dll
+F:\Repos\LicentaGit\Licenta\Licenta.Models\obj\Debug\net6.0\refint\Licenta.Models.dll
+F:\Repos\LicentaGit\Licenta\Licenta.Models\obj\Debug\net6.0\Licenta.Models.pdb
+F:\Repos\LicentaGit\Licenta\Licenta.Models\obj\Debug\net6.0\ref\Licenta.Models.dll

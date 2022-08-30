@@ -1,0 +1,85 @@
+﻿@using Licenta.ViewModels;
+@model List<UserViewModel>;
+
+@{
+
+}
+ <table id="usersTable" class="table table-bordered table-hover">
+     <thead class="thead-dark">
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Role</th>
+                <th scope="col">Buttons</th>
+            </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+           
+            <td>@user.FirstName</td>
+            <td>@user.LastName</td>
+            <td>@user.Email</td>
+            <td>@user.Role</td>
+          <td>
+           @* <button type="button" onClick="modifyPost(`@user.Id`)" >Modify</button>*@
+            <button type="button"  onClick="deletePost(`@user.Id`)">Delete</button>   
+         <button type="submit"  onclick="location.href='@Url.Action("Edit", "AdminStuff",new {id=@user.Id })'"> Modify</button> 
+        </td>
+            </tr>
+            }
+
+
+
+
+            </tbody>
+        </table>
+
+
+         <script>
+let deletePost = (e) => {
+    fetch("https://localhost:7015/AdminStuff/DeleteUser",{
+      method: "POST",
+    body: JSON.stringify({userId: e }),
+       headers: {
+                    "Content-Type": "application/json"
+                }
+    
+    }).then(async function(res) {
+      
+        let response=await res.text();
+
+       
+        document.getElementById("UsersTable").innerHTML = response;
+        })
+
+
+  //e.parentElement.parentElement.remove();
+    console.log(e);
+  
+};
+
+let modifyPost = (e) => {
+    fetch("https://localhost:7015/AdminStuff/UpdateUser",{
+      method: "POST",
+    body: JSON.stringify({userId: e.id }),
+       headers: {
+                    "Content-Type": "application/json"
+                }
+    
+    }).then( function(res) { 
+        //let some = res.json();
+        
+        //console.log(some); 
+        })
+
+
+
+    console.log(e);
+
+
+}
+
+
+
+    </script>
