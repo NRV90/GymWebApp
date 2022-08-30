@@ -35,7 +35,7 @@ It is a personal project , I designed with the help of the Microsoft Visual Stud
 This web app is designed to help you choose the right gym or trainer.
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 ### Built With
 
@@ -56,7 +56,7 @@ As the course advances, all languages, tools and technologies used will be poste
 ### Technologies / Frameworks / Libraries
 ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 <!-- ROADMAP -->
 
@@ -77,5 +77,5 @@ As the course advances, all languages, tools and technologies used will be poste
 
 No license.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+
 
