@@ -61,7 +61,7 @@ As the course advances, all languages, tools and technologies used will be poste
 <!-- ROADMAP -->
 
 ## Roadmap
--[x]Create a repository on GitHub.
+- [x] Create a repository on GitHub.
 -[x]Create Readme.
 -[x]Connect the project to MongoDb.
 -[x]Accounts and roles.
