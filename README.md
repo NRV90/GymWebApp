@@ -9,7 +9,7 @@
 
   <p align="center">
  
-    <a href="https://github.com/ManuAlexandru/TrackingTimeApp/issues">Report Bug</a>
+    [Report Bug](https://github.com/ManuAlexandru/TrackingTimeApp/issues)
   </p>
 </div>
 
@@ -31,7 +31,7 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-It is a project created for a class, I designed with the help of the Microsoft Visual Studio 2022 platform in C#. 
+It is a personal project , I designed with the help of the Microsoft Visual Studio 2022 platform in C#. 
 This web app is designed to help you choose the right gym or trainer.
 
 
