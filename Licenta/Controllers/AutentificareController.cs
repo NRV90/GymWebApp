@@ -1,13 +1,10 @@
 ﻿using Licenta.DAL;
 using Licenta.Identity;
-using Licenta.Models;
 using Licenta.Models.Models;
 using Licenta.ViewModels;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
 
 namespace Licenta.Controllers
 {
@@ -15,56 +12,58 @@ namespace Licenta.Controllers
     {
         private readonly MongoDBService _mongoService;
 
-        public AutentificareController(MongoDBService connection) {
+        public AutentificareController(MongoDBService connection)
+        {
             _mongoService = connection;
         }
-       
+
         public IActionResult Index()
         {
-            
+
             return View();
         }
         [HttpPost]
-        public async  Task<JsonResult> Register( UserViewModel userVM)
+        public async Task<JsonResult> Register(UserViewModel userVM)
         {
-           
-                var user = new UserModel();
-                user.FirstName = userVM.FirstName;
-                user.LastName = userVM.LastName;
-                user.Email = userVM.Email;
-                user.Password = userVM.Password;
-                var createUser = await _mongoService.CreateUserAsync(user);
 
-                if (createUser == 1)
-                {
+            var user = new UserModel();
+            user.FirstName = userVM.FirstName;
+            user.LastName = userVM.LastName;
+            user.Email = userVM.Email;
+            user.Password = userVM.Password;
+            var createUser = await _mongoService.CreateUserAsync(user);
 
-                    Console.WriteLine("Controller is working1");
-                    return Json(new { message = "Connected succesfully" });
-                }
+            if (createUser == 1)
+            {
 
-                else
-                {
+                Console.WriteLine("Controller is working1");
+                return Json(new { message = "Connected succesfully" });
+            }
 
-                    Console.WriteLine("Controller is working2");
-                    return Json(new { message = "Email already been taken!" });
+            else
+            {
 
-                }
-           
+                Console.WriteLine("Controller is working2");
+                return Json(new { message = "Email already been taken!" });
+
+            }
+
 
 
         }
         [HttpPost]
         public async Task<IActionResult> Login(UserViewModel userVM)
         {
-           
+
             var user = new UserModel();
             user.Email = userVM.Email;
-            user.Password = userVM.Password;   
+            user.Password = userVM.Password;
             var loginUser = await _mongoService.ConnectUserAsync(user);//checking if input data is corect and exist in our database
             Console.WriteLine(loginUser);
-            if (loginUser?.Id!=null) {
+            if (loginUser?.Id != null)
+            {
                 user.Role = loginUser.Role;//if loginUser is not null i will take the role passed 
-               
+
                 IdentityUser.CreateClaimsAsync(loginUser, HttpContext);// with this function i create the claims
                 return Redirect("/Autentificare/Profile");
 
@@ -82,7 +81,7 @@ namespace Licenta.Controllers
         [Authorize]
         public IActionResult Profile()
         {
-            
+
             return View();
         }
 
@@ -96,7 +95,7 @@ namespace Licenta.Controllers
 
 
         [Authorize]
-   
+
         public async Task<IActionResult> Logout()
         {
 

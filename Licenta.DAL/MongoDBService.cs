@@ -1,11 +1,10 @@
-﻿using System.Text;
-using System;
-using Licenta.DAL.MongoSettings;
-using MongoDB.Driver;
+﻿using Licenta.DAL.MongoSettings;
 using Licenta.Models.Models;
 using Microsoft.Extensions.Options;
-using System.Security.Cryptography;
 using MongoDB.Bson;
+using MongoDB.Driver;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Licenta.DAL
 {
@@ -24,7 +23,7 @@ namespace Licenta.DAL
             //_userCollection = database.GetCollection<UserModel>(mongoDBsettings.Value.CollectionName);
             MongoClient client = new MongoClient("mongodb+srv://manualex2000:1234@cluster0.y9z7f.mongodb.net/FmDataBase?retryWrites=true&w=majority");
             IMongoDatabase database = client.GetDatabase("simple_db");
-                _userCollection = database.GetCollection<UserModel>("people");
+            _userCollection = database.GetCollection<UserModel>("people");
         }
 
         public async Task<int> CreateUserAsync(UserModel user)
@@ -124,21 +123,21 @@ namespace Licenta.DAL
         }
 
 
-        public async Task<int> ModifyUser(UserModel userModel) 
+        public async Task<int> ModifyUser(UserModel userModel)
         {
             var filter = Builders<UserModel>.Filter.Eq("_id", ObjectId.Parse(userModel.Id));
-            var UpdateDefinition = Builders<UserModel>.Update.Set(user => user.FirstName , userModel.FirstName)
-                                                             .Set(user => user.LastName , userModel.LastName)
-                                                             .Set(user => user.Email , userModel.Email)
-                                                             .Set(user => user.Role , userModel.Role);
-                                                             
+            var UpdateDefinition = Builders<UserModel>.Update.Set(user => user.FirstName, userModel.FirstName)
+                                                             .Set(user => user.LastName, userModel.LastName)
+                                                             .Set(user => user.Email, userModel.Email)
+                                                             .Set(user => user.Role, userModel.Role);
+
             Console.WriteLine("Id Object: " + userModel.Id);
 
             var user = await _userCollection.FindOneAndUpdateAsync(filter, UpdateDefinition);
-            
-            if(user!=null)
-            return 1;
-            return 0;    
+
+            if (user != null)
+                return 1;
+            return 0;
 
         }
 

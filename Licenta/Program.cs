@@ -4,8 +4,11 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDB"));
+builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDbUsers"));
+builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDbSites"));
+
 builder.Services.AddSingleton<MongoDBService>();
+builder.Services.AddSingleton<MongoDBSiteService>();
 
 
 

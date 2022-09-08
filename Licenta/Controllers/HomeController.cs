@@ -18,7 +18,7 @@ namespace Licenta.Controllers
         {
             return View();
         }
-        [Authorize(Roles = "Admin") ]
+        [Authorize(Roles = "Admin")]
         public IActionResult Privacy()
         {
             return View();

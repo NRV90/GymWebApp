@@ -1,8 +1,5 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model Licenta.ViewModels.PageViewModel
+
 <h1>Here you will create your Page</h1>
 
 <h2>Welcome @User.Identity.Name</h2>
@@ -12,4 +9,24 @@
     {
         <li>@c.Type: @c.Value</li>
     }
+   
+
+
+   
+
+
 </ul>
+
+
+<form class="register-form" method="post" asp-controller="OwnerPage" asp-action="CreatePage">
+
+    @Html.Hidden("UserId",@User.Claims.FirstOrDefault().Value)
+    <input asp-for="Price" type="text" placeholder="Price" required />
+    <input asp-for="Title" type="text" placeholder="Title" pattern="^[a-zA-Z]+$" title="The name should contain only letters" required id="prenume" value="" asp />
+    <input asp-for="Description" type="password" placeholder="Description" required />
+    <input asp-for="Location" type="text" placeholder="location" required />
+
+    <button id="submitPage" type="submit">Create Page</button>
+    <p class="message">Already registered? <a href="#">Sign In</a></p>
+
+</form>

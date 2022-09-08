@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Repos\\LicentaGit\\Licenta\\Licenta\\Licenta.csproj": {}
+    "F:\\Repos\\GymWebApp_Clone\\GymWebApp\\Licenta\\Licenta.csproj": {}
   },
   "projects": {
-    "F:\\Repos\\LicentaGit\\Licenta\\Licenta.DAL\\Licenta.DAL.csproj": {
+    "F:\\Repos\\GymWebApp_Clone\\GymWebApp\\Licenta.DAL\\Licenta.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Repos\\LicentaGit\\Licenta\\Licenta.DAL\\Licenta.DAL.csproj",
+        "projectUniqueName": "F:\\Repos\\GymWebApp_Clone\\GymWebApp\\Licenta.DAL\\Licenta.DAL.csproj",
         "projectName": "Licenta.DAL",
-        "projectPath": "F:\\Repos\\LicentaGit\\Licenta\\Licenta.DAL\\Licenta.DAL.csproj",
+        "projectPath": "F:\\Repos\\GymWebApp_Clone\\GymWebApp\\Licenta.DAL\\Licenta.DAL.csproj",
         "packagesPath": "C:\\Users\\Manu\\.nuget\\packages\\",
-        "outputPath": "F:\\Repos\\LicentaGit\\Licenta\\Licenta.DAL\\obj\\",
+        "outputPath": "F:\\Repos\\GymWebApp_Clone\\GymWebApp\\Licenta.DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Manu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\Repos\\LicentaGit\\Licenta\\Licenta.Models\\Licenta.Models.csproj": {
-                "projectPath": "F:\\Repos\\LicentaGit\\Licenta\\Licenta.Models\\Licenta.Models.csproj"
+              "F:\\Repos\\GymWebApp_Clone\\GymWebApp\\Licenta.Models\\Licenta.Models.csproj": {
+                "projectPath": "F:\\Repos\\GymWebApp_Clone\\GymWebApp\\Licenta.Models\\Licenta.Models.csproj"
               }
             }
           }
@@ -77,21 +73,17 @@
         }
       }
     },
-    "F:\\Repos\\LicentaGit\\Licenta\\Licenta.Models\\Licenta.Models.csproj": {
+    "F:\\Repos\\GymWebApp_Clone\\GymWebApp\\Licenta.Models\\Licenta.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Repos\\LicentaGit\\Licenta\\Licenta.Models\\Licenta.Models.csproj",
+        "projectUniqueName": "F:\\Repos\\GymWebApp_Clone\\GymWebApp\\Licenta.Models\\Licenta.Models.csproj",
         "projectName": "Licenta.Models",
-        "projectPath": "F:\\Repos\\LicentaGit\\Licenta\\Licenta.Models\\Licenta.Models.csproj",
+        "projectPath": "F:\\Repos\\GymWebApp_Clone\\GymWebApp\\Licenta.Models\\Licenta.Models.csproj",
         "packagesPath": "C:\\Users\\Manu\\.nuget\\packages\\",
-        "outputPath": "F:\\Repos\\LicentaGit\\Licenta\\Licenta.Models\\obj\\",
+        "outputPath": "F:\\Repos\\GymWebApp_Clone\\GymWebApp\\Licenta.Models\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Manu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -142,21 +134,17 @@
         }
       }
     },
-    "F:\\Repos\\LicentaGit\\Licenta\\Licenta\\Licenta.csproj": {
+    "F:\\Repos\\GymWebApp_Clone\\GymWebApp\\Licenta\\Licenta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Repos\\LicentaGit\\Licenta\\Licenta\\Licenta.csproj",
+        "projectUniqueName": "F:\\Repos\\GymWebApp_Clone\\GymWebApp\\Licenta\\Licenta.csproj",
         "projectName": "Licenta",
-        "projectPath": "F:\\Repos\\LicentaGit\\Licenta\\Licenta\\Licenta.csproj",
+        "projectPath": "F:\\Repos\\GymWebApp_Clone\\GymWebApp\\Licenta\\Licenta.csproj",
         "packagesPath": "C:\\Users\\Manu\\.nuget\\packages\\",
-        "outputPath": "F:\\Repos\\LicentaGit\\Licenta\\Licenta\\obj\\",
+        "outputPath": "F:\\Repos\\GymWebApp_Clone\\GymWebApp\\Licenta\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Manu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -170,8 +158,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\Repos\\LicentaGit\\Licenta\\Licenta.DAL\\Licenta.DAL.csproj": {
-                "projectPath": "F:\\Repos\\LicentaGit\\Licenta\\Licenta.DAL\\Licenta.DAL.csproj"
+              "F:\\Repos\\GymWebApp_Clone\\GymWebApp\\Licenta.DAL\\Licenta.DAL.csproj": {
+                "projectPath": "F:\\Repos\\GymWebApp_Clone\\GymWebApp\\Licenta.DAL\\Licenta.DAL.csproj"
               }
             }
           }

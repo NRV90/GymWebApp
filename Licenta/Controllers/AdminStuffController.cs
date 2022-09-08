@@ -1,5 +1,4 @@
 ﻿using Licenta.DAL;
-using Licenta.Models;
 using Licenta.Models.Models;
 using Licenta.Utils.Mappers;
 using Licenta.ViewModels;
@@ -32,17 +31,17 @@ namespace Licenta.Controllers
             return View(listOfUsers);
         }
         [HttpGet]
-        public async  Task<IActionResult> Edit(UserViewModel user)
+        public async Task<IActionResult> Edit(UserViewModel user)
         {
 
             var userMongo = await _mongoService.FindUser(user.Id);
 
             return View(userMongo.ParseToUserVM());
-        
+
         }
 
         [HttpPost]
-        public async Task<IActionResult> Modify(UserViewModel user) 
+        public async Task<IActionResult> Modify(UserViewModel user)
         {
             Console.WriteLine(user.Id);
             var A = new UserModel();
@@ -53,25 +52,25 @@ namespace Licenta.Controllers
             A.LastName = user.LastName;
             A.Role = user.Role;
             var result = await _mongoService.ModifyUser(A);
-        
-        return View("Index");
-        
+
+            return View("Index");
+
         }
 
 
 
         [HttpPost]
-        public async Task<IActionResult> DeleteUser([FromBody] UserId userId)
+        public async Task<IActionResult> DeleteUser([FromBody] UserIdViewModel userId)
         {
-         
-            var resultOperation = await _mongoService.DeleteUser(userId.userId);
-           
-            
+
+            var resultOperation = await _mongoService.DeleteUser(userId.UserId);
+
+
             var listOfUsers = await GetUsers();
-                return PartialView("_UsersTable",listOfUsers);
+            return PartialView("_UsersTable", listOfUsers);
 
 
-  
+
 
 
 
@@ -80,21 +79,22 @@ namespace Licenta.Controllers
         [HttpGet]
         public IActionResult UpdateUser()
         {
-            
+
             return View();
         }
 
         [HttpPost]
-        public IActionResult UpdateUser([FromBody] UserId userId)
+        public IActionResult UpdateUser([FromBody] UserIdViewModel userId)
         {
-            Console.WriteLine(userId.userId);
+            Console.WriteLine(userId.UserId);
             return RedirectToAction("UpdateUser");
         }
 
 
 
 
-        private async Task<List<UserViewModel>> GetUsers() {
+        private async Task<List<UserViewModel>> GetUsers()
+        {
             var allUsers = await _mongoService.GetAllUsersFromMongo();
 
             var listOfUsers = new List<UserViewModel>();
@@ -116,13 +116,14 @@ namespace Licenta.Controllers
         }
 
 
-        private Object ParseDataEx0(Object A, Object B) {
+        private Object ParseDataEx0(Object A, Object B)
+        {
 
 
 
             return A;
         }
-        
+
 
 
     }

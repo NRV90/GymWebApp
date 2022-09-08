@@ -8,81 +8,81 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Licenta
 build_property.RootNamespace = Licenta
-build_property.ProjectDir = F:\Repos\LicentaGit\Licenta\Licenta\
+build_property.ProjectDir = F:\Repos\GymWebApp_Clone\GymWebApp\Licenta\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = F:\Repos\LicentaGit\Licenta\Licenta
+build_property.MSBuildProjectDirectory = F:\Repos\GymWebApp_Clone\GymWebApp\Licenta
 build_property._RazorSourceGeneratorDebug = 
 
-[F:/Repos/LicentaGit/Licenta/Licenta/Views/AdminStuff/Edit.cshtml]
+[F:/Repos/GymWebApp_Clone/GymWebApp/Licenta/Views/AdminStuff/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5TdHVmZlxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Repos/LicentaGit/Licenta/Licenta/Views/AdminStuff/Index.cshtml]
+[F:/Repos/GymWebApp_Clone/GymWebApp/Licenta/Views/AdminStuff/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5TdHVmZlxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Repos/LicentaGit/Licenta/Licenta/Views/AdminStuff/UpdateUser.cshtml]
+[F:/Repos/GymWebApp_Clone/GymWebApp/Licenta/Views/AdminStuff/UpdateUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5TdHVmZlxVcGRhdGVVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Repos/LicentaGit/Licenta/Licenta/Views/AdminStuff/Users.cshtml]
+[F:/Repos/GymWebApp_Clone/GymWebApp/Licenta/Views/AdminStuff/Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5TdHVmZlxVc2Vycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Repos/LicentaGit/Licenta/Licenta/Views/AdminStuff/_UsersTable.cshtml]
+[F:/Repos/GymWebApp_Clone/GymWebApp/Licenta/Views/AdminStuff/_UsersTable.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5TdHVmZlxfVXNlcnNUYWJsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Repos/LicentaGit/Licenta/Licenta/Views/Autentificare/Denied.cshtml]
+[F:/Repos/GymWebApp_Clone/GymWebApp/Licenta/Views/Autentificare/Denied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0ZW50aWZpY2FyZVxEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Repos/LicentaGit/Licenta/Licenta/Views/Autentificare/Index.cshtml]
+[F:/Repos/GymWebApp_Clone/GymWebApp/Licenta/Views/Autentificare/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0ZW50aWZpY2FyZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Repos/LicentaGit/Licenta/Licenta/Views/Autentificare/Profile.cshtml]
+[F:/Repos/GymWebApp_Clone/GymWebApp/Licenta/Views/Autentificare/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0ZW50aWZpY2FyZVxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Repos/LicentaGit/Licenta/Licenta/Views/Home/Index.cshtml]
+[F:/Repos/GymWebApp_Clone/GymWebApp/Licenta/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Repos/LicentaGit/Licenta/Licenta/Views/Home/Privacy.cshtml]
+[F:/Repos/GymWebApp_Clone/GymWebApp/Licenta/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Repos/LicentaGit/Licenta/Licenta/Views/OwnerPage/CreationPage.cshtml]
+[F:/Repos/GymWebApp_Clone/GymWebApp/Licenta/Views/OwnerPage/CreationPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3duZXJQYWdlXENyZWF0aW9uUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Repos/LicentaGit/Licenta/Licenta/Views/OwnerPage/Index.cshtml]
+[F:/Repos/GymWebApp_Clone/GymWebApp/Licenta/Views/OwnerPage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3duZXJQYWdlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Repos/LicentaGit/Licenta/Licenta/Views/Shared/Error.cshtml]
+[F:/Repos/GymWebApp_Clone/GymWebApp/Licenta/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Repos/LicentaGit/Licenta/Licenta/Views/Shared/_ValidationScriptsPartial.cshtml]
+[F:/Repos/GymWebApp_Clone/GymWebApp/Licenta/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Repos/LicentaGit/Licenta/Licenta/Views/TrainerPage/Index.cshtml]
+[F:/Repos/GymWebApp_Clone/GymWebApp/Licenta/Views/TrainerPage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5lclBhZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Repos/LicentaGit/Licenta/Licenta/Views/_ViewImports.cshtml]
+[F:/Repos/GymWebApp_Clone/GymWebApp/Licenta/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Repos/LicentaGit/Licenta/Licenta/Views/_ViewStart.cshtml]
+[F:/Repos/GymWebApp_Clone/GymWebApp/Licenta/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Repos/LicentaGit/Licenta/Licenta/Views/Shared/_Layout.cshtml]
+[F:/Repos/GymWebApp_Clone/GymWebApp/Licenta/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-j98rxoxvn9
