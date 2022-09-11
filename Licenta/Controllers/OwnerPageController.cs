@@ -1,5 +1,6 @@
 ﻿using Licenta.DAL;
 using Licenta.Models.Models;
+using Licenta.Utils.Mappers;
 using Licenta.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -32,13 +33,7 @@ namespace Licenta.Controllers
         [HttpPost]
         public async Task<int> CreatePage(PageViewModel site)
         {
-            SiteCreationModel finalSite = new SiteCreationModel(); 
-            finalSite.Title = site.Title;
-            finalSite.Description = site.Description;
-            finalSite.Price = site.Price;
-            finalSite.UserId = site.UserId;
-            finalSite.Location = site.Location;
-            await _siteService.AddPage(finalSite);
+            await _siteService.AddPage(site.SendDataToCreateSite());
             return 1;
         }
 

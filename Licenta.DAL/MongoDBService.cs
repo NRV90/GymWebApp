@@ -1,4 +1,6 @@
 ﻿using Licenta.DAL.MongoSettings;
+using Licenta.DAL.Utils.Filters;
+using Licenta.DAL.Utils.UsersFunctions;
 using Licenta.Models.Models;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson;
@@ -31,14 +33,14 @@ namespace Licenta.DAL
 
 
 
-            var searchUser = await _userCollection.FindAsync(x => x.Email.Equals(user.Email));
+            var searchUser = await _userCollection.FindAsync(user.Email.SearchByEmail());
             var validateUser = searchUser.FirstOrDefaultAsync()?.Result;
 
             if (validateUser?.Email == null)
             {
 
 
-                user.Password = hashPassword(user.Password);
+                user.Password = user.Password.HashPassword();
 
 
 
@@ -59,13 +61,13 @@ namespace Licenta.DAL
         }
         public async Task<UserModel> ConnectUserAsync(UserModel user)
         {
-            var theUser = await _userCollection.FindAsync(x => x.Email.Equals(user.Email));//searching for an email match
+            var theUser = await _userCollection.FindAsync(user.Email.SearchByEmail());//searching for an email match
             var resultUser = theUser.FirstOrDefaultAsync()?.Result;//i get the result of the searched done in the upper line
 
             //checking if email exist
             if (resultUser?.Email != null)
             {
-                var hashedLogPass = hashPassword(user.Password);
+                var hashedLogPass = user.Password.HashPassword();
                 if (hashedLogPass == resultUser.Password)
                     return resultUser;//return 1 if the password and email are correct
                 else
@@ -86,8 +88,8 @@ namespace Licenta.DAL
         }
         public async Task<string> DeleteUser(string userId)
         {
-            var deleteFilter = Builders<UserModel>.Filter.Eq("_id", ObjectId.Parse(userId));
-            var resultOperation = await _userCollection.DeleteOneAsync(deleteFilter);
+            //var deleteFilter = Builders<UserModel>.Filter.Eq("_id", ObjectId.Parse(userId));
+            var resultOperation = await _userCollection.DeleteOneAsync(userId.SearchById());
             Console.WriteLine(resultOperation);
             if (resultOperation != null)
                 return "Ok";
@@ -113,9 +115,9 @@ namespace Licenta.DAL
         }
         public async Task<UserModel> FindUser(string userId)
         {
-            var filter = Builders<UserModel>.Filter.Eq("_id", ObjectId.Parse(userId));
-            Console.WriteLine("Id string: " + userId);
-            var user = await _userCollection.FindAsync(filter);
+            //var filter = Builders<UserModel>.Filter.Eq("_id", ObjectId.Parse(userId));
+            //Console.WriteLine("Id string: " + userId);
+            var user = await _userCollection.FindAsync(userId.SearchById());
             var finalUser = user.FirstOrDefaultAsync()?.Result;
 
             return finalUser;
@@ -125,7 +127,7 @@ namespace Licenta.DAL
 
         public async Task<int> ModifyUser(UserModel userModel)
         {
-            var filter = Builders<UserModel>.Filter.Eq("_id", ObjectId.Parse(userModel.Id));
+            //var filter = Builders<UserModel>.Filter.Eq("_id", ObjectId.Parse(userModel.Id));
             var UpdateDefinition = Builders<UserModel>.Update.Set(user => user.FirstName, userModel.FirstName)
                                                              .Set(user => user.LastName, userModel.LastName)
                                                              .Set(user => user.Email, userModel.Email)
@@ -133,7 +135,7 @@ namespace Licenta.DAL
 
             Console.WriteLine("Id Object: " + userModel.Id);
 
-            var user = await _userCollection.FindOneAndUpdateAsync(filter, UpdateDefinition);
+            var user = await _userCollection.FindOneAndUpdateAsync(userModel.Id.SearchById(), UpdateDefinition);
 
             if (user != null)
                 return 1;
@@ -145,14 +147,7 @@ namespace Licenta.DAL
 
 
 
-        private string hashPassword(string password)
-        {
-            var sha = SHA256.Create();
-            var asBytePass = Encoding.Default.GetBytes(password);
-            var hashedPass = sha.ComputeHash(asBytePass);
-
-            return Convert.ToBase64String(hashedPass);
-        }
+       
 
     }
 
