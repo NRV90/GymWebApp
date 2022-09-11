@@ -43,15 +43,8 @@ namespace Licenta.Controllers
         [HttpPost]
         public async Task<IActionResult> Modify(UserViewModel user)
         {
-            Console.WriteLine(user.Id);
-            var A = new UserModel();
-            A.Id = user.Id;
-            A.Email = user.Email;
-            A.Password = user.Password;
-            A.FirstName = user.FirstName;
-            A.LastName = user.LastName;
-            A.Role = user.Role;
-            var result = await _mongoService.ModifyUser(A);
+
+            var result = await _mongoService.ModifyUser(user.ParseToUserModel());
 
             return View("Index");
 
@@ -100,28 +93,10 @@ namespace Licenta.Controllers
             var listOfUsers = new List<UserViewModel>();
             foreach (var user in allUsers)
             {
-                var usermodel = new UserViewModel();
-                usermodel.Id = user.Id;
-                usermodel.Email = user.Email;
-                usermodel.FirstName = user.FirstName;
-                usermodel.LastName = user.LastName;
-                usermodel.Role = user.Role;
-
-
-                listOfUsers.Add(usermodel);
-
+                listOfUsers.Add((UserViewModel)user.ParseToUserVM());
             }
             return listOfUsers;
 
-        }
-
-
-        private Object ParseDataEx0(Object A, Object B)
-        {
-
-
-
-            return A;
         }
 
 

@@ -1,6 +1,7 @@
 ﻿using Licenta.DAL;
 using Licenta.Identity;
 using Licenta.Models.Models;
+using Licenta.Utils.Mappers;
 using Licenta.ViewModels;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -26,12 +27,7 @@ namespace Licenta.Controllers
         public async Task<JsonResult> Register(UserViewModel userVM)
         {
 
-            var user = new UserModel();
-            user.FirstName = userVM.FirstName;
-            user.LastName = userVM.LastName;
-            user.Email = userVM.Email;
-            user.Password = userVM.Password;
-            var createUser = await _mongoService.CreateUserAsync(user);
+            var createUser = await _mongoService.CreateUserAsync(userVM.SentDataToCreateUser());
 
             if (createUser == 1)
             {
@@ -55,14 +51,12 @@ namespace Licenta.Controllers
         public async Task<IActionResult> Login(UserViewModel userVM)
         {
 
-            var user = new UserModel();
-            user.Email = userVM.Email;
-            user.Password = userVM.Password;
-            var loginUser = await _mongoService.ConnectUserAsync(user);//checking if input data is corect and exist in our database
+
+            var loginUser = await _mongoService.ConnectUserAsync(userVM.SentDataToConnectUser());//checking if input data is corect and exist in our database
             Console.WriteLine(loginUser);
             if (loginUser?.Id != null)
             {
-                user.Role = loginUser.Role;//if loginUser is not null i will take the role passed 
+
 
                 IdentityUser.CreateClaimsAsync(loginUser, HttpContext);// with this function i create the claims
                 return Redirect("/Autentificare/Profile");
