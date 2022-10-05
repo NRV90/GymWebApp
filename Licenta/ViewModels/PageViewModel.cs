@@ -11,7 +11,7 @@
         public string Location { get; set; }
         public string Price { get; set; }
 
-
+        public IFormFile CoverPhoto { get; set; }
 
 
 

@@ -13,6 +13,10 @@ namespace Licenta.Utils.Mappers
             B.Location = A.Location;
             B.Price= A.Price;
            B.UserId= A.UserId;
+            if (A.CoverPhoto != null) {
+                string folder = "sites";
+            
+            }
 
 
             return B;
