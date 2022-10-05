@@ -18,14 +18,14 @@
 </ul>
 
 
-<form class="register-form" method="post" asp-controller="OwnerPage" asp-action="CreatePage">
+<form class="register-form" method="post" enctype="multipart/form-data" asp-controller="OwnerPage" asp-action="CreatePage">
 
     @Html.Hidden("UserId",@User.Claims.FirstOrDefault().Value)
     <input asp-for="Price" type="text" placeholder="Price" required />
     <input asp-for="Title" type="text" placeholder="Title" pattern="^[a-zA-Z]+$" title="The name should contain only letters" required id="prenume" value="" asp />
     <input asp-for="Description" type="password" placeholder="Description" required />
     <input asp-for="Location" type="text" placeholder="location" required />
-
+    <input asp-for="CoverPhoto" type="file" placeholder="location" required />
     <button id="submitPage" type="submit">Create Page</button>
     <p class="message">Already registered? <a href="#">Sign In</a></p>
 
