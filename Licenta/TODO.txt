@@ -1,0 +1,4 @@
+﻿Add .gitignore
+Code arrange
+Implement repository pattern + Generic repositoy
+Implement N-Layer Architecture
